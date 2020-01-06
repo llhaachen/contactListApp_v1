@@ -1,0 +1,71 @@
+.contact-list {
+    padding: 2rem;
+    width: 80%;
+    
+    &-box {       
+       padding: 1rem;
+
+       .form-filter { 
+           width: 100%;
+           height: 2rem;
+           border: none;
+           border-bottom: solid 2px $primary-color;
+           font-size: 1.3rem;
+           font-weight: 300;
+           text-indent: 7px;   
+           &:focus {
+               border-bottom:solid 2.5px $secondary-color;
+               @include smooth-transition;
+           }
+       }
+       .collection {
+           border: solid 0.7px $primary-color;
+           margin-top: 1rem;
+           text-align: left;
+           list-style-type: none;
+
+           &-header {
+               font-size: 1.7rem;
+               font-weight: 300;
+               padding: 1.5rem;
+           }
+           &-item {
+               border-bottom: solid 0.7px $primary-color;
+               padding: 0.5rem 3rem;
+               cursor: pointer;
+           }
+           .listname{
+               color: $secondary-color;
+               font-size: 1.2rem;
+               font-weight: 450;
+           }
+           .itembox {
+               font-size: 1.1rem;
+               font-weight: 400;
+               padding: 1rem 0 1rem 1.5rem;
+               justify-content: space-between;
+               display: none;
+
+               &.open{
+                   display: flex;
+               }
+           }
+           .listbutton {
+               font-weight: 500;
+               text-decoration: none;
+               color: $tertiary-color;
+               @include smooth-transition;
+               &:hover {
+                   color: lighten($tertiary-color, 16%);
+                   @include smooth-transition;
+               }
+           }
+       }
+    }
+
+    .contact-header {
+        font-size: 3rem;
+        font-weight: 450;
+        padding: 2rem;
+    }
+}

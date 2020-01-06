@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+ }
+
+ $primary-color: #d4d4d4;
+ $secondary-color: #057ae8;
+ $tertiary-color: #de2153;
+
+ @mixin smooth-transition {
+     transition: all 0.4s ease-in-out;
+ }
+
+ @mixin media-sm {
+     @media screen and (max-width: 767px) {
+         @content;
+     }
+ }

@@ -1,0 +1,97 @@
+@import 'config';
+@import 'contactList';
+@import 'addContact';
+@import 'responsive';
+
+ body {
+    background: #fff;
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+    font-size: 18px;
+ }
+ .secondary {
+     color: $secondary-color;
+ }
+ input:focus {
+    outline: none;
+ }
+ .container {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     display: flex;
+     text-align: center;
+     justify-content: center;
+
+     .alert { 
+         width: 100%;
+         padding: 0.7rem;
+         margin: 0.7rem 0 0.7rem 0;
+         font-weight: 450;
+         border-radius: 6px;
+
+         &.alert-danger {
+             margin-bottom: 0.4rem;
+             padding: 0.2rem;
+             background: $tertiary-color;
+             color: #fff;
+             
+         }
+         &.alert-success {
+             background: $secondary-color;
+             color: #fff;
+         }
+     }
+ }
+ .button-expand {
+    position: fixed;
+    padding: 0px;
+    bottom: 7rem;
+    right: 8rem;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $secondary-color;
+    border-radius: 50%;
+    @include smooth-transition;
+    cursor: pointer;
+    .strip  {
+        position: absolute;
+        width: 32px;
+        background: #fff;
+        height: 7px;
+        @include smooth-transition;
+
+        &::before {
+            content: '';
+            position: absolute;                
+            width: 32px;
+            background: #fff;
+            height: 7px;
+            transform: rotate(90deg) translateY(16px);
+            @include smooth-transition;
+        }
+    }
+    &:hover {
+        background: lighten($secondary-color, 14%);
+        @include smooth-transition;
+    }
+    &.open {
+        background: $tertiary-color;
+
+        &:hover {
+            background: lighten($tertiary-color, 14%);
+            @include smooth-transition;
+        }
+
+        .strip {
+            transform: rotate(315deg);
+            @include smooth-transition;
+        }
+    }
+    
+}
+ 
+ 
+ 

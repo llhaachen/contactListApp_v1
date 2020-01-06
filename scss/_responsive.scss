@@ -1,0 +1,54 @@
+@include media-sm {
+    .contact-list{
+        width: 100%;
+        padding: 1.2rem;
+
+        .contact-header {
+            font-size: 2rem;
+            font-weight: 450;
+            padding: 1rem;
+        }
+
+        .collection {
+            
+            &-header {
+                padding: 1rem;
+            }
+
+            .itembox {
+
+                &.open{
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+            .listbutton {
+                margin-top: 9px;
+                margin-left: 1rem;
+                font-weight: 400;
+            }
+        }
+        .form-filter {
+            font-size: 1rem;
+        }
+    }
+    .container{
+
+        .button-expand {
+            right: 1rem;
+            width: 55px;
+            height: 55px;
+        }
+        .add-contact {
+
+            &-modal {
+                width: 90%;
+                padding: 1.8rem;
+                h1 {
+                    font-size: 1.9rem;
+                }
+            }
+        }
+    }
+    
+}
